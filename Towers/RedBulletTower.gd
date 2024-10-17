@@ -21,7 +21,7 @@ func _on_tower_body_entered(body):
 		currTargets = get_node("Tower").get_overlapping_bodies()
 		
 		for i in currTargets:
-			print(currTargets)
+			#print(currTargets)
 			if "Soldier" in i.name:
 				tempArray.append(i)
 			
@@ -36,7 +36,7 @@ func _on_tower_body_entered(body):
 					
 		curr = currTarget
 		pathName = currTarget.get_parent().name
-		print (Bullet)
+		#print (Bullet)
 		
 		var tempBullet = Bullet.instantiate()
 		tempBullet.pathName = pathName

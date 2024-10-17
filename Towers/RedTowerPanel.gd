@@ -32,12 +32,14 @@ func _on_gui_input(event):
 			var path = get_tree().get_root().get_node("Main/Towers")
 					
 			path.add_child(tempTower)
-			tempTower.position = event.global_position - Vector2(2,0)
-			print(event.global_position)
-			print(event.position)
-			print(tempTower.global_position)
-			print(tempTower.position)
+			# this sucks ont he mac
+			#tempTower.position = event.global_position
+			# this is legit
+			tempTower.position = get_viewport().get_mouse_position()
 			tempTower.get_node("Area").hide()
+			#print(event)
+			#print(event.global_position)
+			#print(get_viewport().get_mouse_position())
 	else:
 		if get_child_count() > 1:
 			get_child(1).queue_free()

@@ -14,4 +14,8 @@ position = Vector2(40, 40)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("2_cltw0")
 
+[node name="Node2D" type="Node2D" parent="TowerDefenseTile250"]
+position = Vector2(-32, -32)
+scale = Vector2(0.8, 0.8)
+
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
